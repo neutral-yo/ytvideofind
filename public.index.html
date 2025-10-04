@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Finder & Sharer</title>
+    <style>
+        :root {
+            --primary: #ff0000;
+            --secondary: #282828;
+            --light: #f9f9f9;
+            --dark: #181818;
+            --gray: #aaaaaa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--dark);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .setup-instructions {
+            background: var(--secondary);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        
+        .setup-steps {
+            text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .setup-steps li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .code {
+            background: #000;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        
+        a {
+            color: #4285F4;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>YouTube Video Finder & Sharer</h1>
+            <p>Quickly find and share your videos</p>
+        </header>
+        
+        <div class="setup-instructions">
+            <h2>Setup Instructions</h2>
+            <ol class="setup-steps">
+                <li><strong>Get YouTube API Credentials:</strong>
+                    <div class="code">
+                        1. Go to Google Cloud Console<br>
+                        2. Create a project or select existing one<br>
+                        3. Enable YouTube Data API v3<br>
+                        4. Create OAuth 2.0 credentials
+                    </div>
+                </li>
+                <li><strong>Add Environment Variables:</strong>
+                    <div class="code">
+                        YOUTUBE_CLIENT_ID=your_client_id<br>
+                        YOUTUBE_CLIENT_SECRET=your_client_secret<br>
+                        REDIRECT_URL=your_deployed_url/auth/callback
+                    </div>
+                </li>
+                <li><strong>Deploy to Hosting Platform:</strong>
+                    <ul>
+                        <li><a href="https://vercel.com" target="_blank">Vercel</a> (Easy deployment)</li>
+                        <li><a href="https://heroku.com" target="_blank">Heroku</a></li>
+                        <li><a href="https://render.com" target="_blank">Render</a></li>
+                        <li>Or your own server with Node.js</li>
+                    </ul>
+                </li>
+                <li>After deployment, visit your site and connect your YouTube account!</li>
+            </ol>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <p>This is a template repository. The full working version requires YouTube API integration.</p>
+            <p>For the complete version with authentication, see the repository README.</p>
+        </div>
+    </div>
+</body>
+</html>
